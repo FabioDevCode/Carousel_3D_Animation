@@ -1,0 +1,125 @@
+*::-webkit-scrollbar {
+    width: 0px;
+}
+
+body {
+    user-select: none;
+    font-family: Helvetica, sans-serif;
+    background-color: #151515;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    min-height: 2600px;
+    overflow-x: hidden;
+    transform-style: preserve-3d;
+
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    top: 360px;
+    position: sticky;
+    width: 300px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: 1000ms;
+    transform: perspective(15000px) rotateZ(0deg) rotateY(0deg) rotateX(-90deg);
+}
+
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transition: 1000ms;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(50px);
+}
+
+.card .front {
+    cursor: pointer;
+    position: absolute;
+    background-color: crimson;
+    font-size: 5em;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.card .back {
+    position: absolute;
+    background-color: #333333;
+    transition-duration: 500ms;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+.btns {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    gap: 100px;
+}
+
+.btns .btn {
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #454545;
+    border-radius: 60px;
+}
+
+.btns .btn svg {
+    height: 20px;
+    color: #454545;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
