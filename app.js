@@ -31,6 +31,7 @@ window.addEventListener('scroll', function(e) {
     // }
 
     if(windowTop < 1000) {
+        degrees = 0;
         for(let j = 0; j < card.length; j++) {
             card[j].style = `transform: rotateY(calc(${j} * 45deg)) translateZ(50px);`;
         };
